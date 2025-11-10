@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains a Google Colab notebook that demonstrates sophisticated analysis of antibody glycosylation patterns and their impact on computational antibody design workflows. The toolkit addresses a critical gap in current antibody design methods: most computational tools ignore post-translational modifications, particularly glycosylation, leading to designs that fail when tested against physiologically relevant, glycosylated targets.
+This repository contains a Google Colab notebooks that demonstrate sophisticated analysis of antibody glycosylation patterns and their impact on computational antibody design workflows. The toolkit addresses a critical gap in current antibody design methods: most computational tools ignore post-translational modifications, particularly glycosylation, leading to designs that fail when tested against physiologically relevant, glycosylated targets.
 
 ## Scientific Motivation
 
