@@ -1,5 +1,15 @@
 # Glycan-Aware Computational Antibody Design Analysis
 
+> **Companion repository.** This holds the Monte Carlo / structural-constraint treatment of antibody
+> sialylation. The mechanistic kinetic treatment of the same question — Michaelis-Menten enzyme
+> kinetics over solvent-accessible surface area — lives in
+> [antibody-sialylation-kinetics](https://github.com/christophergaughan/antibody-sialylation-kinetics),
+> which is the more developed of the two. Start there unless you specifically want the Monte Carlo
+> approach.
+>
+> **Status: demonstration.** Neither repository has been validated against measured site-occupancy
+> data. Outputs indicate which sites merit measurement; they are not predictions to design against.
+
 **A demonstration toolkit for analyzing sialylation and glycosylation heterogeneity in therapeutic antibody design**
 
 ## Overview
@@ -8,10 +18,10 @@ This repository contains a Google Colab notebooks that demonstrate sophisticated
 
 ## Scientific Motivation
 
-Recent computational antibody design tools like RFdiffusion (Bennett et al., 2024) have shown impressive results but face a fundamental limitation: they design against de-glycosylated protein structures from the Protein Data Bank. This leads to several problems:
+Recent computational antibody design tools like RFdiffusion (Bennett et al., 2025) have shown impressive results but face a fundamental limitation: they design against protein structures from the Protein Data Bank, where glycans are frequently absent or unmodeled. This leads to several problems:
 
 - **False Positives**: Designs that look computationally promising but clash with glycans when tested experimentally
-- **Success Rate Degradation**: In the RFdiffusion antibody paper, only 25% (1/4) of top designs successfully bound natively glycosylated targets
+- **Success Rate Degradation**: designs validated against deglycosylated structures may underperform on natively glycosylated targets. *(A specific hit-rate figure previously quoted here has been removed pending verification against the published paper.)*
 - **Heterogeneity Ignored**: Real therapeutic antibodies are heterogeneous mixtures of 5-10+ glycoforms, not single static structures
 
 ### Key Statistics from Literature (Vattepu et al., 2022)
@@ -106,7 +116,7 @@ From Monte Carlo simulation (1000 designs):
 ### Related Work
 
 - **RFdiffusion** (Watson et al., 2023): Generative diffusion model for protein design
-- **RFdiffusion Antibodies** (Bennett et al., 2024): Antibody-specific implementation
+- **RFdiffusion Antibodies** (Bennett et al., 2025): Antibody-specific implementation
 - **AlphaFold3** (Abramson et al., 2024): Improved prediction including PTMs
 - **Glycosylation Review** (Vattepu et al., 2022): Comprehensive analysis of antibody sialylation
 
@@ -175,7 +185,7 @@ This analysis supports:
 
 1. Vattepu R, Sneed SL, Anthony RM (2022). Sialylation as an Important Regulator of Antibody Function. *Frontiers in Immunology* 13:818736. doi: 10.3389/fimmu.2022.818736
 
-2. Bennett NR, et al. (2024). Improving de novo protein binder design with deep learning. *bioRxiv*. doi: 10.1101/2024.03.25.586580
+2. Bennett NR, Watson JL, Ragotte RJ, Borst AJ, See DL, Weidle C, et al. (2025). Atomically accurate de novo design of antibodies with RFdiffusion. *Nature* 649(8095):183-193. doi: 10.1038/s41586-025-09721-5. PMID: 41193805
 
 3. Watson JL, et al. (2023). De novo design of protein structure and function with RFdiffusion. *Nature* 620:1089-1100. doi: 10.1038/s41586-023-06415-8
 
